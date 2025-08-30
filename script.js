@@ -439,3 +439,17 @@ function showStatus(msg, isError=false){
   });
 
 })();
+
+const carousel = document.getElementById("carousel");
+  const next = document.getElementById("next");
+  const prev = document.getElementById("prev");
+
+  let scrollAmount = 0;
+
+  next.addEventListener("click", () => {
+    carousel.scrollBy({ left: 300, behavior: "smooth" });
+  });
+
+  prev.addEventListener("click", () => {
+    carousel.scrollBy({ left: -300, behavior: "smooth" });
+  });

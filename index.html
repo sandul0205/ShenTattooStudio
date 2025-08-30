@@ -9,6 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+
   <link rel="icon" href="assets/logo.jpg" >
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -65,60 +69,59 @@
     </div>
   </section>
 
-  <!-- FEATURE / DESTINE -->
-  <section class="feature" id="feature">
-    <div class="container feature-grid">
-      <div class="feature-side" data-animate>
-        <img src="assets/handTatto.jpg" alt="Arm tattoo">
+  <!-- NEW TATTOO IDEAS SECTION -->
+<section class="tattoo-ideas">
+  <div class="container ideas-wrap">
+     <!-- Right side: text -->
+    <div class="ideas-text">
+      <p class="label">STORIES ON SKIN</p>
+      <h2 class="title">NEW <span class="highlight">TATTOO</span><br> IDEAS</h2>
+      <p class="desc">
+        Explore designs that speak your story from delicate fine-lines to bold tribal expressions.
+      </p>
+      <a href="tattoo_ideas.html" class="btn">Explore Designs</a>
+    </div>
+    <!-- Left side: images -->
+    <div class="ideas-images">
+      <div class="idea-img">
+        <img src="assets/ideas/download (1).jpeg" alt="Tattoo Style 1">
       </div>
-
-      <div class="feature-main">
-        <h3 class="label">STORIES ON SKIN</h3>
-        <h2 class="display">NEW TATTOO<br><span class="outline">IDEAS</span></h2>
-        <div class="poster" data-animate>
-          <img src="assets/image.jpg" alt="Back tattoo art">
-        </div>
-        <p class="muted">From fine-line minimal to bold Polynesian — explore designs that fit your story.</p>
-        <a class="btn" href="tattoo_ideas.html">Explore</a>
+      <div class="idea-img">
+        <img src="assets/ideas/download.jpeg" alt="Tattoo Style 2">
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- GALLERY STRIP -->
-  <section class="gallery" id="gallery">
-    <div class="container">
-      <h2 class="h1" data-animate>OUR GALLERY</h2>
-      
-      <div class="gallery-grid">
-        <figure class="card" data-animate>
-          <img src="assets/img2.jpeg" alt="Tattoo 1">
-        </figure>
-        <figure class="card" data-animate>
-          <img src="assets/img8.jpeg" alt="Tattoo 2">
-        </figure>
-        <figure class="card" data-animate>
-          <img src="assets/img15.jpeg" alt="Tattoo 3">
-        </figure>
-        <figure class="card tall" data-animate>
-          <img src="assets/img3.jpeg" alt="Tattoo 4">
-        </figure>
-        <figure class="card" data-animate>
-          <img src="assets/img5.jpeg" alt="Tattoo 5">
-        </figure>
-        <figure class="card" data-animate>
-          <img src="assets/img14.jpeg" alt="Tattoo 6">
-        </figure>
-        <figure class="card" data-animate>
-          <img src="assets/img11.jpeg" alt="Tattoo 7">
-        </figure>
-        
-        <aside class="vertical word" aria-hidden="true">ETERNAL TATTOO</aside>
 
-        <div><a class="btn" style="align-items:right;" href="gallery.html">Explore</a></div>
-                
-      </div>
+<!-- GALLERY CAROUSEL MULTI -->
+<section class="carousel-section">
+  <div class="carousel-container">
+   <div class="text-center mb-5">
+  <h2 class="fw-bold display-5 text-uppercase tattoo-title">Our Gallery</h2>
+  <p class="tattoo-subtitle">A showcase of artistry, passion, and permanent stories.</p>
+</div>
+
+    <div class="carousel" id="carousel">
+      <div class="carousel-item"><img src="assets/Gallery/img8.jpeg" alt="Tattoo 1"></div>
+      <div class="carousel-item"><img src="assets/Gallery/img10.jpeg" alt="Tattoo 2"></div>
+      <div class="carousel-item"><img src="assets/Gallery/img11.jpeg" alt="Tattoo 3"></div>
+      <div class="carousel-item"><img src="assets/Gallery/img13.jpeg" alt="Tattoo 4"></div>
+      <div class="carousel-item"><img src="assets/Gallery/img16.jpg" alt="Tattoo 5"></div>
     </div>
-  </section>
+
+    <!-- Navigation -->
+    <button class="carousel-btn prev" id="prev">&#10094;</button>
+    <button class="carousel-btn next" id="next">&#10095;</button>
+  </div>
+
+  <div class="text-center">
+    <a href="gallery.html" class="btn-explore">Explore More</a>
+  </div>
+</section>
+
+
+<link rel="stylesheet" href="gallery.css">
 
   <!-- PIERCING SECTION -->
   <section class="piercing" id="piercing">
@@ -133,7 +136,7 @@
           <li>Clear aftercare guide & follow-up</li>
         </ul>
         <div class="actions">
-          <a class="btn" href="#booking">Book Piercing</a>
+          <a class="btn" href="booking.html">Book Piercing</a>
         </div>
       </div>
     
@@ -177,31 +180,22 @@
     </div>
 
     <!-- Collage -->
-    <div class="about-gallery" data-animate>
-      <figure class="shot shot--big">
-        <img loading="lazy" src="assets/owner.jpg" alt="Studio owner and artist">
-        <span class="est-badge">EST. 2018</span>
-      </figure>
-
-      <figure class="shot">
-        <img loading="lazy" src="assets/shop.jpg" alt="Studio">
-      </figure>
-
-      <figure class="shot shot--tall">
-        <img loading="lazy" src="assets/earpiercing.png" alt="Piercing work">
-      </figure>
-
-      <figure class="shot">
-        <img loading="lazy" src="assets/download.jpeg" alt="Tattoo in progress">
-      </figure>
-
-     
-    </div>
+<!-- ABOUT GALLERY -->
+<div class="about-gallery">
+  <img src="assets/about/owner.jpg" alt="Tattoo Work 1">
+  
+  <!-- Vertical Video -->
+  <div class="video-wrapper">
+    <video src="assets/about/work1.mp4" autoplay muted loop playsinline></video>
+  </div>
+  
+  <img src="assets/about/shop1.jpg" alt="Tattoo Work 3">
+  <img src="assets/about/download.jpeg" alt="Tattoo Work 4">
+</div>
   </div>
 </section>
 
 <!-- Reviews / Testimonials -->
-<!-- REVIEWS -->
 <section class="reviews" id="reviews">
   <div class="container">
     <div class="reviews-head" data-animate>
@@ -256,7 +250,7 @@
         </label>
 
         <label>Review
-          <textarea name="text" rows="4" required placeholder="How was your experience?"></textarea>
+          <textarea name="text" rows="3" required placeholder="How was your experience?"></textarea>
         </label>
 
         <div class="row">
@@ -339,7 +333,7 @@
       </div>
       <div>
         <h4>Contact</h4>
-        <p>Phone: <a href="tel:+94770000000">+94 76 996 9918</a></p>
+        <p>Phone: <a href="tel:+9476996 9918">+94 76 996 9918</a></p>
         <p>Email: <a href="mailto:hello@shentattoo.com">hello@shentattoo.com</a></p>
       </div>
       <div>
