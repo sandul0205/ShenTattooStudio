@@ -453,3 +453,12 @@ const carousel = document.getElementById("carousel");
   prev.addEventListener("click", () => {
     carousel.scrollBy({ left: -300, behavior: "smooth" });
   });
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  if (!preloader) return;
+
+  preloader.classList.add("pl--hide");
+  document.body.classList.remove("is-loading");
+
+  setTimeout(() => preloader.remove(), 600);
+});
