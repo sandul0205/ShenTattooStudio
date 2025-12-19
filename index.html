@@ -45,34 +45,55 @@
 
   <!-- your site content starts... -->
 
-  <!-- Top Bar -->
-  <header class="topbar">
-    <div class="container">
-      <!-- Left: brand + small info -->
-      <div class="topbar-left-wrap">
-        <a class="logo" href="#top" aria-label="Shen Tattoo & Piercing">
-          <img class="logo-img" src="assets/logo-removebg-preview.png" alt="Shen Tattoo logo">
-          <span class="logo-text">SHEN TATTOO</span>
-        </a>
+  <!-- Top Bar (Modern) -->
+<header class="topbar" id="topbar">
+  <div class="container topbar-inner">
+    <!-- Brand -->
+    <a class="brand" href="#top" aria-label="Shen Tattoo & Piercing">
+      <img class="brand-logo" src="assets/logo-removebg-preview.png" alt="Shen Tattoo logo">
+      <div class="brand-text">
+        <span class="brand-name">SHEN TATTOO</span>
+        <span class="brand-sub">Tattoo • Piercing • Coverup</span>
+      </div>
+    </a>
 
-        <div class="topbar-left">
-          <small>Custom Tattoo • Piercing • Coverup Tattoo</small>
-        </div>
+    <!-- Desktop nav -->
+    <nav class="nav-desktop" aria-label="Primary navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="#tattoo-ideas" class="nav-link">Tattoo Ideas</a>
+      <a href="#gallery" class="nav-link">Our Gallery</a>
+      <a href="#about" class="nav-link">About Us</a>
+      <a href="#reviews" class="nav-link">Reviews</a>
+      <a href="#contact" class="btn btn-sm nav-cta">Contact Us</a>
+    </nav>
+
+    <!-- Mobile button -->
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <div class="mobile-nav-card">
+      <div class="mobile-nav-head">
+        <span class="mobile-title">Menu</span>
+        <button class="mobile-close" id="navClose" aria-label="Close menu">
+          <i class="ri-close-line"></i>
+        </button>
       </div>
 
-      <nav class="nav" id="nav">
-        <a href="index.html">Home</a>
-        <a href="#tattoo-ideas">Tattoo Ideas</a>
-        <a href="#gallery">Our Gallery</a>
-        <a href="#about">About  Us</a>
-        <a href="#contact" class="btn btn-sm">Contact Us</a>
-      </nav>
-
-      <button class="hamburger" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="mobile-links">
+        <a href="index.html" class="m-link">Home</a>
+        <a href="#tattoo-ideas" class="m-link">Tattoo Ideas</a>
+        <a href="#gallery" class="m-link">Our Gallery</a>
+        <a href="#about" class="m-link">About Us</a>
+        <a href="#reviews" class="m-link">Reviews</a>
+        <a href="#contact" class="btn nav-mobile-cta">Contact Us</a>
+      </div>
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- HERO -->
   <section class="hero section-dark" id="top">
@@ -95,7 +116,7 @@
           <span class="line">OF <span class="ink">INK</span></span>
         </h1>
 
-        <p class="muted">Tattoo & body piercing — craft, culture, and character since 2018.</p>
+        <p class="muted">Tattoo & body piercing | craft, culture, and character since 2018.</p>
 
         <!-- ✅ HERO ACTIONS (WhatsApp + Booking) -->
         <div class="hero-actions">
@@ -105,7 +126,7 @@
             target="_blank"
             rel="noopener"
           >
-            <i class="ri-whatsapp-line" aria-hidden="true"></i>
+            <i class="ri-whatsapp-line" ></i>
             Chat on WhatsApp
           </a>
 
@@ -165,30 +186,48 @@
   </section>
 
   <!-- GALLERY CAROUSEL MULTI -->
-  <section class="carousel-section" id="gallery">
-    <div class="carousel-container">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold display-5 text-uppercase tattoo-title">Our Gallery</h2>
-        <p class="tattoo-subtitle">A showcase of artistry, passion, and permanent stories.</p>
-      </div>
+ <section class="carousel-section" id="gallery">
+  <div class="carousel-container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold display-5 text-uppercase tattoo-title">Our Gallery</h2>
+      <p class="tattoo-subtitle">A showcase of artistry, passion, and permanent stories.</p>
 
-      <div class="carousel" id="carousel">
-        <div class="carousel-item"><img src="assets/Gallery/img8.jpeg" alt="Tattoo 1"></div>
-        <div class="carousel-item"><img src="assets/Gallery/img10.jpeg" alt="Tattoo 2"></div>
-        <div class="carousel-item"><img src="assets/Gallery/img11.jpeg" alt="Tattoo 3"></div>
-        <div class="carousel-item"><img src="assets/Gallery/img13.jpeg" alt="Tattoo 4"></div>
-        <div class="carousel-item"><img src="assets/Gallery/img16.jpg" alt="Tattoo 5"></div>
-      </div>
+      <!-- NEW: Social note + links -->
+      <p class="gallery-social-note">
+        More project videos & images are on our
+        <a href="https://facebook.com/yourpage" target="_blank" rel="noopener">Facebook</a>
+        and
+        <a href="https://tiktok.com/@yourpage" target="_blank" rel="noopener">TikTok</a>.
+      </p>
 
-      <!-- Navigation -->
-      <button class="carousel-btn prev" id="prev">&#10094;</button>
-      <button class="carousel-btn next" id="next">&#10095;</button>
+      <div class="gallery-social-links">
+        <a class="social-btn" href="https://www.facebook.com/share/17uPGLVKVU/" target="_blank" rel="noopener" aria-label="Facebook Page">
+          <i class="ri-facebook-fill"></i> Facebook
+        </a>
+        <a class="social-btn" href="https://www.tiktok.com/@shentattoostudio?_r=1&_t=ZS-92KL9e85QEn" target="_blank" rel="noopener" aria-label="TikTok Page">
+          <i class="ri-tiktok-fill"></i> TikTok
+        </a>
+      </div>
     </div>
 
-    <div class="text-center">
-      <a href="gallery.html" class="btn-explore">Explore More</a>
+    <div class="carousel" id="carousel">
+      <div class="carousel-item"><img src="assets/Gallery/img8.jpeg" alt="Tattoo 1"></div>
+      <div class="carousel-item"><img src="assets/Gallery/img10.jpeg" alt="Tattoo 2"></div>
+      <div class="carousel-item"><img src="assets/Gallery/img11.jpeg" alt="Tattoo 3"></div>
+      <div class="carousel-item"><img src="assets/Gallery/img13.jpeg" alt="Tattoo 4"></div>
+      <div class="carousel-item"><img src="assets/Gallery/img16.jpg" alt="Tattoo 5"></div>
     </div>
-  </section>
+
+    <!-- Navigation -->
+    <button class="carousel-btn prev" id="prev">&#10094;</button>
+    <button class="carousel-btn next" id="next">&#10095;</button>
+  </div>
+
+  <div class="text-center">
+    <a href="gallery.html" class="btn-explore">Explore More</a>
+  </div>
+</section>
+
 
   <!-- PIERCING SECTION -->
   <section class="piercing" id="piercing">
@@ -232,7 +271,7 @@
         </p>
 
         <ul class="about-list">
-          <li>Custom designs — fine line to bold Polynesian</li>
+          <li>Custom designs | fine line to bold Polynesian</li>
           <li>Single-use needles & medical-grade sterilization</li>
           <li>Clear aftercare & friendly follow-ups</li>
         </ul>
@@ -303,7 +342,7 @@
           <h3>Write a Review</h3>
 
           <label>Full Name
-            <input name="name" required placeholder="e.g., Sandul Dulhan">
+            <input name="name" required placeholder="e.g., Your Name" />
           </label>
 
           <label>Your Rating
@@ -334,7 +373,7 @@
         <form id="contactForm" class="contact-form" novalidate>
           <div class="grid-2">
             <label>Full Name
-              <input name="name" required placeholder="e.g., Sandul Dulhan" />
+              <input name="name" required placeholder="e.g., Your Name" />
             </label>
             <label>Email
               <input type="email" name="email" required placeholder="your@email.com" />
@@ -391,18 +430,18 @@
             </div>
           </a>
 
-          <p class="ft__desc">Premium tattoos, clean lines, and safe piercing — crafted with care.</p>
+          <p class="ft__desc">Premium tattoos, clean lines, and safe piercing crafted with care.</p>
 
           <div class="ft__chips">
             <span class="ft__chip"><i class="ri-map-pin-2-line"></i> Panadura</span>
-            <span class="ft__chip"><i class="ri-time-line"></i> Tue–Sun 10:00–19:00</span>
+            <span class="ft__chip"><i class="ri-time-line"></i> Mon–Sun 10.30 am – 21:00 pm</span>
           </div>
         </div>
 
         <div class="ft__col">
           <h4 class="ft__title">Contact</h4>
           <a class="ft__link" href="tel:+94769969918"><i class="ri-phone-line"></i> +94 76 996 9918</a>
-          <a class="ft__link" href="mailto:hello@shentattoo.com"><i class="ri-mail-line"></i> hello@shentattoo.com</a>
+          <a class="ft__link" href="mailto:hello@shentattoo.com"><i class="ri-mail-line"></i>K.k.shehanperera@gmail.com</a>
           <a class="ft__link" href="https://maps.google.com/?q=03+Horana+Rd,+Panadura+12500" target="_blank" rel="noopener">
             <i class="ri-map-pin-line"></i> 03 Horana Rd, Panadura 12500
           </a>
@@ -412,13 +451,13 @@
           <h4 class="ft__title">Follow</h4>
 
           <div class="ft__social">
-            <a class="ft__socialBtn" href="https://instagram.com/yourhandle" aria-label="Instagram" target="_blank" rel="noopener">
-              <i class="ri-instagram-line"></i>
-            </a>
-            <a class="ft__socialBtn" href="https://facebook.com/yourpage" aria-label="Facebook" target="_blank" rel="noopener">
+             <a class="ft__socialBtn" href="https://www.facebook.com/share/17uPGLVKVU/" aria-label="Facebook" target="_blank" rel="noopener">
               <i class="ri-facebook-circle-line"></i>
             </a>
-            <a class="ft__socialBtn" href="https://tiktok.com/@yourhandle" aria-label="TikTok" target="_blank" rel="noopener">
+            <a class="ft__socialBtn" href="https://www.instagram.com/shentattoostudio?igsh=a3Bhd3FqZnQ1bmNl" aria-label="Instagram" target="_blank" rel="noopener">
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a class="ft__socialBtn" href="https://www.tiktok.com/@shentattoostudio?_r=1&_t=ZS-92KL9e85QEn" aria-label="TikTok" target="_blank" rel="noopener">
               <i class="ri-tiktok-line"></i>
             </a>
             <a class="ft__socialBtn" href="https://wa.me/94769969918" aria-label="WhatsApp" target="_blank" rel="noopener">
