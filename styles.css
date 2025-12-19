@@ -1404,6 +1404,32 @@ a{color:inherit; text-decoration:none}
   font-size: 13px;
 }
 
+.ft__bottomRow{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.ft__credit{
+  margin:0;
+  opacity:.9;
+  font-size:.95rem;
+}
+
+.ft__credit a{
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+  border-bottom:1px dashed rgba(255,255,255,.45);
+}
+
+.ft__credit a:hover{
+  border-bottom-style:solid;
+}
+
+
 /* Responsive */
 @media (max-width: 900px){
   .ft__grid{ grid-template-columns: 1fr; }
